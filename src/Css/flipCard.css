@@ -1,0 +1,28 @@
+.stat-page {
+  height: 81vh;
+  width: 60vw;
+  background-color: black;
+  position: fixed;
+  left: 620px;
+  top: 60px;
+  opacity: 0.8;
+  border-radius: 4%;
+}
+button {
+  align-self: center;
+  font-family: Monsterat, sans-serrif;
+  width: 110px;
+}
+p {
+  padding: 10px 10px;
+}
+.passive-img {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  left: 28vw;
+  top: 100px;
+}
+.pname {
+  margin-top: 130px;
+}

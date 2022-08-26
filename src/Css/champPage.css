@@ -1,0 +1,16 @@
+.main-div {
+  background-color: rgb(190, 178, 178);
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: -100;
+  display: flex;
+  overflow: hidden;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}

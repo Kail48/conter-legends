@@ -1,0 +1,10 @@
+.stat {
+  display: flex;
+  justify-content: space-around;
+  width: 40vh;
+  margin: 0;
+}
+.stat-container {
+  padding-top: 20px;
+  padding-left: 100px;
+}

@@ -1,0 +1,44 @@
+.input-container {
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  top: 70px;
+  left: 26vw;
+  box-shadow: 5px 10px;
+}
+.input-container input {
+  height: 50px;
+  width: 50%;
+  outline: none;
+  border: none;
+  border-bottom: 2 solid black;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  left: 35px;
+  top: 15px;
+}
+.input-container:hover {
+  scale: 1.1;
+  transition: scale 0.5s ease-in-out;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.top-label {
+  position: relative;
+  top: 18px;
+  align-self: center;
+}
+.bot-label {
+  align-self: center;
+  position: relative;
+  top: 15px;
+}

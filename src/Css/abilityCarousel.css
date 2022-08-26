@@ -1,0 +1,12 @@
+.carousel-container {
+  height: 25vh;
+  width: 54vw;
+  background-color: white;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  border-radius: 4%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+* {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-image: url("../Assets/jhinbg.jpg");
+  height: 100vh;
+}
+.video-bg {
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  min-width: 100%;
+  object-fit: fill;
+}

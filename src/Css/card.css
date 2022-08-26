@@ -1,0 +1,27 @@
+img {
+  height: 600px;
+  width: 400px;
+
+  align-self: center;
+}
+.card-wrapper {
+  padding-top: 20px;
+  background-color: rgb(197, 81, 81);
+  height: 720px;
+  width: 480px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  text-align: center;
+  border-radius: 4%;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin-top: 7px;
+}
+.context {
+  padding-top: 10px;
+  height: 100px;
+}

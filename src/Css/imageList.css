@@ -1,0 +1,41 @@
+.list-container {
+  overflow-x: auto;
+  display: flex;
+  max-width: 86vw;
+
+  height: max-content;
+  height: 40vh;
+  position: fixed;
+  bottom: 5vh;
+  left: 7vw;
+  align-items: center;
+  justify-content: safe;
+  scroll-behavior: smooth;
+}
+.list-container::-webkit-scrollbar {
+  width: 0;
+}
+.left-scroll {
+  position: fixed;
+  bottom: 20vh;
+  left: 2px;
+  z-index: 500;
+  opacity: 0.5;
+}
+.right-scroll {
+  z-index: 500;
+  position: fixed;
+  right: 2px;
+  bottom: 20vh;
+  opacity: 0.5s;
+}
+.right-scroll:hover {
+  opacity: 1;
+  scale: 1.5;
+  transition: scale opacity 0.5s;
+}
+.left-scroll:hover {
+  opacity: 1;
+  scale: 1.5;
+  transition: scale opacity 0.5s;
+}
