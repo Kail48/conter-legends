@@ -12,7 +12,7 @@ class Header extends React.Component {
       <div className="header-container">
         <div className="overlay">
           <div className="logo-container">
-            <img src={logo} className="logo" width={202} height={60}></img>
+            <img src={logo} className="logo"></img>
           </div>
           <SearchBar onChangeData={this.routedCallBack} />
         </div>

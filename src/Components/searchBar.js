@@ -3,6 +3,7 @@ import "../Css/searchBar.css";
 import { motion } from "framer-motion";
 class SearchBar extends React.Component {
   handleChange = (event) => {
+    event.preventDefault();
     const separated = event.target.value.split(" ");
     const upped = separated.map((word) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
@@ -17,10 +18,8 @@ class SearchBar extends React.Component {
           <motion.input
             whileHover={{ scale: 1.5, zIndex: "5" }}
             style={{
-              color: "black",
               fontFamily: "Montserrat,sans-serif",
-              textAlign: "center",
-              fontSize: 20,
+              fontSize: "20px",
             }}
             className="prompt"
             type="text"

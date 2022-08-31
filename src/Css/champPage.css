@@ -14,3 +14,14 @@
   min-height: 100%;
   overflow: hidden;
 }
+.show-case {
+}
+@media (max-device-width: 500px) {
+  .show-case {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}

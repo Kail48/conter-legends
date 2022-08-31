@@ -8,6 +8,8 @@ class HasteInput extends React.Component {
     }
   };
   render() {
+    const isMobile = this.props.mob;
+    const labelSize = isMobile ? "1.6vw" : "1.2vw";
     return (
       <div className="input-container">
         <h3
@@ -16,7 +18,7 @@ class HasteInput extends React.Component {
             color: "black",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 20,
+            fontSize: { labelSize },
           }}
         >
           Ability
@@ -30,7 +32,7 @@ class HasteInput extends React.Component {
             fontFamily: "Montserrat,sans-serif",
             fontWeight: "bolder",
             textAlign: "center",
-            fontSize: 30,
+            fontSize: "2.5em",
           }}
         />
         <h3
@@ -39,7 +41,7 @@ class HasteInput extends React.Component {
             color: "black",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 20,
+            fontSize: { labelSize },
           }}
         >
           Haste

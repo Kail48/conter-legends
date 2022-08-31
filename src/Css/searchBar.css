@@ -1,5 +1,31 @@
 .search-div {
-  width: min-content;
+  width: 60%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 5%;
+  align-items: center;
+  height: 10vh;
+}
+.search-div input {
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  height: 70%;
+}
+@media (max-device-width: 500px) {
+  .search-div {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 10%;
+    align-items: center;
+    height: 10vh;
+    padding: 0;
+  }
+
+  input.prompt {
+    height: 6vh;
+    width: 60vw;
+
+    margin: 0;
+  }
 }

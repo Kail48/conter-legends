@@ -6,10 +6,12 @@ import StatCard from "./statCard";
 import AbilityCarousel from "./abilitycarousel";
 import HasteInput from "./hasteInput";
 const FlipCard = ({ data }) => {
-  console.log(data);
   const [isFlipped, setIsFlipped] = useState(false);
   const [abilityHaste, setAbilityHaste] = useState(0);
-
+  const [isMobile, setIsMobile] = useState(false);
+  const loreFont = isMobile ? "2vw" : "1em";
+  const headFont = isMobile ? "2.5vw" : "3vw";
+  const titleFont = isMobile ? "1.5vw" : "2vw";
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
@@ -17,14 +19,24 @@ const FlipCard = ({ data }) => {
   const abilityHasterecieved = (receivedAbilityHaste) => {
     setAbilityHaste(receivedAbilityHaste);
   };
+  React.useEffect(() => {
+    const devWidth = window.innerWidth;
+    if (devWidth <= 500) {
+      setIsMobile(true);
+      console.log(devWidth);
+    }
+  }, []);
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+    <ReactCardFlip
+      isFlipped={isFlipped}
+      flipDirection={isMobile ? "horizontal" : "vertical"}
+    >
       <div className="stat-page">
         <button onClick={handleClick} className="ui teal button">
           Check Spells
         </button>
-        <StatCard stats={data.stats} />
+        <StatCard stats={data.stats} mob={isMobile} />
         <div class="ui divider"></div>
         <div className="lore-container">
           <h2
@@ -32,7 +44,7 @@ const FlipCard = ({ data }) => {
               color: "#FFBEBF",
               fontFamily: "Montserrat,sans-serif",
               textAlign: "center",
-              fontSize: 30,
+              fontSize: { headFont },
             }}
           >
             Lore
@@ -42,7 +54,7 @@ const FlipCard = ({ data }) => {
               color: "#FFBEBF",
               fontFamily: "Montserrat,sans-serif",
               textAlign: "center",
-              fontSize: 20,
+              fontSize: { loreFont },
             }}
           >
             {data.lore}
@@ -55,7 +67,7 @@ const FlipCard = ({ data }) => {
               color: "#FFBEBF",
               fontFamily: "Montserrat,sans-serif",
               textAlign: "center",
-              fontSize: 30,
+              fontSize: { headFont },
             }}
           >
             Counter-Tips
@@ -65,7 +77,7 @@ const FlipCard = ({ data }) => {
               color: "#FFBEBF",
               fontFamily: "Montserrat,sans-serif",
               textAlign: "center",
-              fontSize: 20,
+              fontSize: { loreFont },
             }}
           >
             {data.counterTips.length == 0
@@ -80,11 +92,12 @@ const FlipCard = ({ data }) => {
           See Info
         </button>
         <h2
+          className="title"
           style={{
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 30,
+            fontSize: { titleFont },
           }}
         >
           {`${data.name}'s Spells`}
@@ -96,13 +109,17 @@ const FlipCard = ({ data }) => {
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 20,
+            fontSize: { loreFont },
           }}
         >
           {data.passiveName}
         </h3>
-        <AbilityCarousel data={data} abilityHaste={abilityHaste} />
-        <HasteInput onChangeData={abilityHasterecieved} />
+        <AbilityCarousel
+          data={data}
+          abilityHaste={abilityHaste}
+          mob={isMobile}
+        />
+        <HasteInput onChangeData={abilityHasterecieved} mob={isMobile} />
       </div>
     </ReactCardFlip>
   );

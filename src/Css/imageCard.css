@@ -1,8 +1,10 @@
 .card-container {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
   opacity: 1;
   cursor: pointer;
+  height: 70%;
+  width: 100%;
 }
 .card-container:hover {
   opacity: 1;
@@ -18,4 +20,22 @@
 }
 .content:hover {
   background-color: black;
+}
+.content {
+  width: 100%;
+}
+@media (max-device-width) {
+  .card-container {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    opacity: 1;
+    cursor: pointer;
+    height: max-content;
+    width: max-content;
+  }
+  .card-container img {
+    height: 50%;
+    width: 60%;
+    border-radius: 4%;
+  }
 }

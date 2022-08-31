@@ -12,16 +12,18 @@ export default function ChampDetails(props) {
   const [abilityHaste, setAbilityHaste] = useState(null);
   const [champData, setChampData] = useState(null);
   const [champ, setChamp] = useState(null);
+  
   const location = useLocation();
 
   React.useEffect(() => {
+    console.log(window.innerWidth);
     const champ = location.state.champ;
     getChampData(champ).then((data) => {
       setChampData(data);
       setChamp(champ);
     });
   }, []);
-  console.log(champData);
+
   return champData == null ? (
     <Loader />
   ) : (
@@ -37,8 +39,8 @@ export default function ChampDetails(props) {
           epithet={champData.title}
           lore={champData.lore}
         />
+        <FlipCard data={champData} />
       </div>
-      <FlipCard data={champData} />
     </div>
   );
 }

@@ -4,7 +4,6 @@
   padding: 0;
 }
 #root {
-  background-image: url("../Assets/jhinbg.jpg");
   height: 100vh;
 }
 .video-bg {
@@ -13,6 +12,24 @@
   right: 0;
   bottom: 0;
   height: 100vh;
-  min-width: 100%;
+  width: 100vw;
   object-fit: fill;
+  background-attachment: fixed;
+}
+@media (max-width: 500) {
+  * {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .video-bg {
+    opacity: 1;
+
+    height: 90vh;
+    width: 100vw;
+    object-fit: fill;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
 }

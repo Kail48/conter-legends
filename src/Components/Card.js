@@ -1,5 +1,5 @@
 import React from "react";
-import frame from "../Assets/frame.png";
+
 import "../Css/card.css";
 
 const Card = (props) => {
@@ -15,7 +15,7 @@ const Card = (props) => {
             color: "white",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 30,
+            fontSize: "3vh",
           }}
         >
           {props.name}
@@ -25,7 +25,7 @@ const Card = (props) => {
             color: "white",
             fontFamily: "Montserrat,sans-serif",
             textAlign: "center",
-            fontSize: 20,
+            fontSize: "2vh",
           }}
         >
           {title}

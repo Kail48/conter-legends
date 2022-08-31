@@ -1,28 +1,63 @@
 .stat-page {
-  height: 81vh;
+  height: 90vh;
   width: 60vw;
   background-color: black;
-  position: fixed;
-  left: 620px;
-  top: 60px;
+  position: absolute;
+  left: 35vw;
+  top: 6vh;
   opacity: 0.8;
   border-radius: 4%;
 }
 button {
   align-self: center;
   font-family: Monsterat, sans-serrif;
-  width: 110px;
+  width: 12%;
 }
 p {
   padding: 10px 10px;
 }
 .passive-img {
-  height: 90px;
-  width: 90px;
+  height: 12%;
+  width: 10%;
   position: absolute;
-  left: 28vw;
-  top: 100px;
+  margin-top: 2%;
+  left: 45%;
+  top: 10%;
 }
 .pname {
-  margin-top: 130px;
+  margin-top: 15%;
+  font-size: 1vw;
+}
+.title h2 {
+  font-size: 2vw;
+}
+@media (max-device-width: 500px) {
+  .stat-page {
+    height: 90vh;
+    width: 90vw;
+    background-color: black;
+    position: absolute;
+    left: 5vw;
+    top: 6vh;
+    opacity: 0.8;
+    border-radius: 4%;
+  }
+  button {
+    align-self: center;
+    font-family: Monsterat, sans-serrif;
+    width: 20%;
+    height: 6%;
+  }
+  .pname {
+    margin-top: 5%;
+    font-size: 2vw;
+  }
+  .passive-img {
+    height: 8%;
+    width: 10%;
+    position: relative;
+    margin-top: 2%;
+    left: 45%;
+    top: 1%;
+  }
 }

@@ -6,11 +6,14 @@ class SpellCard extends React.Component {
     this.props.onLevelUp(this.props.data.abilityName);
   };
   render() {
+    const isMobile = this.props.mob;
     const rank = this.props.rank + 1;
+    const iconSize = isMobile ? "big" : "huge";
+    const numSize = isMobile ? 20 : 30;
+    const descSize = isMobile ? 10 : 20;
     const cd = this.props.data.cd.toFixed(0);
     const cost = this.props.data.cost.toFixed(0);
-    console.log(this.props.data);
-    console.log(this.props.data.abilityName, " ", this.props.rank);
+
     return (
       <div className="spell-card-container">
         <div className="top">
@@ -28,7 +31,7 @@ class SpellCard extends React.Component {
                   color: "white",
                   fontFamily: "Montserrat,sans-serif",
                   textAlign: "center",
-                  fontSize: 30,
+                  fontSize: { descSize },
                 }}
               >
                 {this.props.data.name}
@@ -38,7 +41,7 @@ class SpellCard extends React.Component {
                   color: "white",
                   fontFamily: "Montserrat,sans-serif",
                   textAlign: "center",
-                  fontSize: 20,
+                  fontSize: { descSize },
                 }}
               >
                 {this.props.data.description}
@@ -46,7 +49,7 @@ class SpellCard extends React.Component {
             </div>
           </ReactTooltip>
           <i
-            className="black angle double up icon huge"
+            className={`black angle double up icon ${iconSize}`}
             onClick={this.levelUp}
           ></i>
         </div>
@@ -57,7 +60,7 @@ class SpellCard extends React.Component {
                 color: "#d9138a",
                 fontFamily: "Montserrat,sans-serif",
                 textAlign: "center",
-                fontSize: 35,
+                fontSize: { numSize },
               }}
             >
               {rank}
@@ -71,7 +74,7 @@ class SpellCard extends React.Component {
                 color: "#e2d810",
                 fontFamily: "Montserrat,sans-serif",
                 textAlign: "center",
-                fontSize: 35,
+                fontSize: { numSize },
               }}
             >
               {cd}
@@ -85,7 +88,7 @@ class SpellCard extends React.Component {
                 color: "#12a4d9",
                 fontFamily: "Montserrat,sans-serif",
                 textAlign: "center",
-                fontSize: 35,
+                fontSize: { numSize },
               }}
             >
               {cost}

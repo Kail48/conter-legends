@@ -8,10 +8,9 @@ const AbilityCarousel = (props) => {
   const [wRank, setWRank] = useState(0);
   const [eRank, setERank] = useState(0);
   const [rRank, setRRank] = useState(0);
-  console.log("received ah is:", props.abilityHaste);
+
   const aH = isNaN(props.abilityHaste) ? 0 : props.abilityHaste;
-  console.log("aH is ", aH);
-  console.log(getCd(100, 0));
+  const isMobile = props.mob;
   const qCooldown = getCd(props.data.qCooldown[qRank], aH);
   const qCost = props.data.qCost[qRank];
   const wCooldown = getCd(props.data.wCooldown[wRank], aH);
@@ -61,11 +60,11 @@ const AbilityCarousel = (props) => {
   };
   return (
     <div className="carousel-container">
-      <SpellCard data={qdata} rank={qRank} onLevelUp={levelUp} />
+      <SpellCard data={qdata} rank={qRank} onLevelUp={levelUp} mob={isMobile} />
 
-      <SpellCard data={wdata} rank={wRank} onLevelUp={levelUp} />
-      <SpellCard data={edata} rank={eRank} onLevelUp={levelUp} />
-      <SpellCard data={rdata} rank={rRank} onLevelUp={levelUp} />
+      <SpellCard data={wdata} rank={wRank} onLevelUp={levelUp} mob={isMobile} />
+      <SpellCard data={edata} rank={eRank} onLevelUp={levelUp} mob={isMobile} />
+      <SpellCard data={rdata} rank={rRank} onLevelUp={levelUp} mob={isMobile} />
     </div>
   );
 };

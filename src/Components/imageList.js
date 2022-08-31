@@ -14,7 +14,7 @@ class ImageList extends React.Component {
   mainimageList = {};
   constructor(props) {
     super(props);
-    console.log(`${this.props.searchString} is at imagelist`);
+
     getChampList().then((champL) => {
       const imageL = {};
       champL.forEach((champ) => {
@@ -30,11 +30,9 @@ class ImageList extends React.Component {
     slider.scrollLeft = slider.scrollLeft - 150;
   };
   slideRight = () => {
-    console.log("right clicked");
     const slider = document.getElementById("carousal");
-    console.log(slider.scrollLeft);
+
     slider.scrollLeft = slider.scrollLeft + 150;
-    console.log(slider.scrollLeft);
   };
 
   render() {
@@ -49,7 +47,6 @@ class ImageList extends React.Component {
       renderList = this.state.champList.filter((string) =>
         string.includes(searchString)
       );
-      console.log(window.location.pathname);
 
       renderList.forEach((name) => (renderImage[name] = getSquareImage(name)));
     }

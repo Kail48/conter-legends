@@ -39,3 +39,24 @@
   scale: 1.5;
   transition: scale opacity 0.5s;
 }
+@media (max-device-width: 500px) {
+  .list-container {
+    overflow-x: auto;
+    display: flex;
+    max-width: 90vw;
+
+    height: 30vh;
+    position: absolute;
+    bottom: 5vh;
+
+    align-items: center;
+    justify-content: safe;
+    scroll-behavior: smooth;
+  }
+  .left-scroll {
+    display: none;
+  }
+  .right-scroll {
+    display: none;
+  }
+}

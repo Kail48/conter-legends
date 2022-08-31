@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import "../Css/statCard.css";
-const StatCard = ({ stats }) => {
+const StatCard = ({ stats, mob }) => {
+  const isMobile = mob;
+  const statFontS = isMobile ? "1.6vw" : "2vw";
+  console.log(statFontS);
   const atk = stats.attack > 9 ? 9 : stats.attack;
   const def = stats.defense > 9 ? 9 : stats.defense;
   const dif = stats.difficulty > 9 ? 9 : stats.difficulty;
@@ -13,8 +16,8 @@ const StatCard = ({ stats }) => {
           style={{
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
-            textAlign: "center",
-            fontSize: 20,
+
+            fontSize: { statFontS },
           }}
         >
           Attack
@@ -23,7 +26,7 @@ const StatCard = ({ stats }) => {
         <ProgressBar
           maxCompleted={10}
           completed={atk.toString()}
-          width="2500%"
+          width={isMobile ? "1200%" : "2500%"}
           bgColor="red"
           animateOnRender={true}
         />
@@ -33,8 +36,8 @@ const StatCard = ({ stats }) => {
           style={{
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
-            textAlign: "center",
-            fontSize: 20,
+
+            fontSize: { statFontS },
           }}
         >
           Defense
@@ -42,7 +45,7 @@ const StatCard = ({ stats }) => {
 
         <ProgressBar
           completed={def.toString()}
-          width="2500%"
+          width={isMobile ? "1200%" : "2500%"}
           bgColor="teal"
           maxCompleted={10}
         />
@@ -52,8 +55,8 @@ const StatCard = ({ stats }) => {
           style={{
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
-            textAlign: "center",
-            fontSize: 20,
+
+            fontSize: { statFontS },
           }}
         >
           Difficulty
@@ -62,7 +65,7 @@ const StatCard = ({ stats }) => {
         <ProgressBar
           maxCompleted={10}
           completed={dif.toString()}
-          width="2500%"
+          width={isMobile ? "1200%" : "2500%"}
           bgColor="grey"
           animateOnRender={true}
         />
@@ -72,8 +75,8 @@ const StatCard = ({ stats }) => {
           style={{
             color: "#FFBEBF",
             fontFamily: "Montserrat,sans-serif",
-            textAlign: "center",
-            fontSize: 20,
+
+            fontSize: { statFontS },
           }}
         >
           Magic
@@ -82,7 +85,7 @@ const StatCard = ({ stats }) => {
         <ProgressBar
           maxCompleted={10}
           completed={mgk.toString()}
-          width="2500%"
+          width={isMobile ? "1200%" : "2500%"}
           bgColor="aqua"
           animateOnRender={true}
         />

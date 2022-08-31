@@ -1,12 +1,26 @@
 .carousel-container {
-  height: 25vh;
-  width: 54vw;
+  height: 30%;
+  width: 90%;
   background-color: white;
   position: relative;
-  left: 50px;
-  top: 50px;
+  left: 5%;
+  top: 5%;
   border-radius: 4%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-device-width: 500px) {
+  .carousel-container {
+    height: 40%;
+    width: 90%;
+    background-color: white;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    border-radius: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
