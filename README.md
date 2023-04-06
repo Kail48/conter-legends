@@ -1,1 +1,1 @@
-[Deployed verion](counterlegends.netlify.app)
+[Deployed verion]((https://counterlegends.netlify.app)
