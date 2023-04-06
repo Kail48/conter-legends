@@ -1,1 +1,1 @@
-#Deployed version: counterlegends.netlify.app
+[Deployed verion](counterlegends.netlify.app)
